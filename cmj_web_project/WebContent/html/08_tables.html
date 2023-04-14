@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML Tables</title>
+	<style>
+	table,th,td {
+		border:1px solid gray;
+		border-collapse : collapse;
+	}
+	th, td {
+	
+		font-size : 12px;
+	/*
+		padding-top : 10px;
+		padding-right : 10px;
+		padding-bottom : 10px;
+		padding-left : 10px;
+		top, bottom : 10px, right,left:20px;
+	*/
+		padding : 10px 20px;
+	}
+	
+	th:nth-child(even), td:nth-child(even) {
+ 	 background-color: #D6EEEE;
+	}
+	
+	
+	</style>
+</head>
+<body>
+	<h1>Tables 3행(tr) 4열(td)</h1>
+	<p> tr에는 border가 적용 안됨, td에는 적용됨 </p>
+	<p> border에는 두께(1px), 스타일(solid 직선,점선), 색상 지정할 수 있음<br>
+		border-collapse : collapse; border 사이 공백 제거<br>
+		padding : 글자 시작, 끝 양 옆에 공백<br>
+		padding-top 위에만 패딩 생성, right, bottom, left<br>
+		padding : 10(t) 12(r) 10(b) 12(l);<br>
+		padding : 10px 20px => top, bottom : 10px right,left : 20px<br>
+		colspan = "2" 2열을 합침, rowspan = 행을 합침<br>
+		tr:nth-child(even) {
+ 		background-color: #D6EEEE;
+ 		=tr의 짝수에만 색을 넣어줌
+}
+	</p>
+
+	<table>
+		<tr>
+			<!-- <th>번호</th> -->
+			<th colspan="2">번호/성명</th>
+			<th>연락처</th>
+			<th>주소</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>010-123-1234</td>
+			<td rowspan="2">서울시 강남구 역삼동</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>홍길순</td>
+			<td>010-223-1233</td>
+			<!-- <td>서울시 강남구 역삼동</td> -->
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>더조은</td>
+			<td>010-333-3333</td>
+			<td>서울시 성동구 행당동</td>
+		</tr>
+	</table>
+</body>
+</html>
