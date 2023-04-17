@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Block & inLine</title>
+	<style>
+		p, div, h3, span {
+			background-color : tomato;
+		}
+		/* inline level인 span 태그를 block 으로 변경 */
+		span {
+			display: block;
+		}
+		
+	</style>
+	
+
+
+</head>
+<body>
+	
+	<h1>
+	블럭 레벨은 한 줄을 다 차지하기 때문에 옆에 나란히 적어도 밑으로 가서 작성됨<br>
+	
+	h3가/h3<br>
+	h3나/h3<br>
+	h3다/h3<br>
+	
+	=> 가<br>
+	     나<br>
+	     다<br>
+	
+	
+	하지만 인라인 레벨은 자기 영역까지만 표시하기 때문에옆에 나란히 적으면 옆에 작성됨<br>
+	
+	span가/span<br>
+	span나/span<br>
+	span다/span<br>
+	
+	=> 가나다
+	
+	</h1>
+	
+	<h2>Block & inLine Tags</h2>
+	<p>h*, p, div 태그들이 대표적인 Block level(태그)</p>
+	<p>p태그는 css를 적용해보면 페이지의 한 줄을 다 차지한다 => 이렇게 한 줄을 다 차지하는 태그들을 block level </p>
+	<div>div 태그 역시 한 줄을 다 차지 = Block Level</div>
+	
+	<h3>H3 태그 = Block Level = 들어가는 데이터의 크기는 작을 수 있지만 "한 줄을 모두 쓴다"</h3>
+	
+	<hr></hr> 
+	<p>hr = 라인 하나 긋는 태그</p>
+	<span>Span 태그 = 한 줄을 다 차지 하지 않고, 데이터가 있는 만큼만 영역이 만들어짐 = inline tag </span><br><br>
+	<span>Span 태그 - img 파일 "옆"에 이미지 파일 출력됨
+		<img src="../images/gogi.jpg" width="200px" height="200px">
+	</span>
+	
+	<h3>h3 tag</h3>
+		<img src="../images/gogi.jpg" width="500px" height="100px">
+	
+	
+	<span>Span 태그 - Inline level
+		<a href="#">A 태그 - Inline level</a>
+	</span>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
