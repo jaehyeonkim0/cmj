@@ -1,0 +1,17 @@
+/*
+selector(º±≈√¿⁄) {
+	property : value; ...
+}
+*/	
+
+h1 {
+		background-color: yellow;
+	}
+.h {
+		background-color: powderblue;
+		color: white;
+	}
+#h2 {
+		background-color: tomato;
+		color: yellow;
+	}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Border</title>
+	<style>
+		p {
+			background: powderblue;
+			padding: 20px;
+			/* height: 100px; */
+		}
+		
+		.p1 {
+		/* 	border-style: dotted;
+			border-width: 5px;
+			border-color: red; */
+			border: 5px dotted red;
+		}
+		
+		.p2 {
+			/* border-style: solid;
+			border-width: 3px;
+			border-color: yellow; */
+			border: 3px solid blue;
+			border-radius: 5px;
+		}
+		
+		.p3 {
+			/* border-style: groove;
+			border-width: 10px;
+			border-color: tomato; */
+			border: 10px groove tomato;
+			border-radius: 10px;
+		}
+		
+		.p4 {
+			border-style: dotted solid groove solid;
+			border-color: tomato blue green pink;
+			border-width: 5px 10px 10px 5px;
+			/* border-top-style: none;
+			border-right-style: solid;
+			border-bottom-style: groove;
+			border-left-style: solid;
+			border-bottom-color: tomato; */
+		}
+		
+		.p5 {
+			/*border bottom 10px solid, color: blue*/
+			border-bottom-style: solid;
+			border-bottom-width: 10px;
+			border-bottom-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>Border</h1>
+	<p class="p1">Border style 1</p>
+	<p class="p2">Border style 2</p>
+	<p class="p3">Border style 3</p>
+	<p class="p4">Border style 4</p>
+	<p class="p5">Border style 5</p>
+</body>
+</html>
