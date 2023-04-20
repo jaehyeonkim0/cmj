@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Links</title>
+	<style>
+		* {
+			font-family: "나눔고딕";
+			font-weight: bold;
+		}
+		
+		div {
+			/*block이 있으면 width,height 조절 가능
+			없으면 불가능*/
+			border: 1px solid black;
+			display: inline-block;
+			margin: 10px;
+			padding: 10px 30px;
+			width: 100px;
+			text-align: center;
+		}
+		
+		div:hover {
+			background: powderblue;
+			cursor: pointer;
+		}
+	</style>
+	<script>
+		function test(){
+			location.href="http://www.naver.com";
+		}
+	</script>
+</head>
+<body>
+	<h1>Links</h1>
+	<hr>
+	<div onclick="test()">네이버</div>
+	<div>구글</div>
+	<div>다음</div>
+</body>
+</html>
