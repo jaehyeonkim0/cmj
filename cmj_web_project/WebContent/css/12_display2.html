@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Display</title>
+	<style>
+		div {
+			font-family: "나눔고딕";
+			display: inline-block;
+			border: 1px solid lightgray;
+			width: 280px;
+			text-align: center;
+			margin: 0px 10px;
+		}
+		button {
+			color: white;
+			border: none;
+			width: 250px;
+			/* height: 40px; height를 주면 글자는 가만히 있고 그 밑으로 늘어남*/
+			padding: 15px 0px;
+			background: mediumseagreen;
+			cursor: pointer;
+			border-radius: 5px;
+			margin: 10px 0px;
+			font-weight: bold;
+		}
+		div img {
+			width: 250px;
+			height: 250px;
+		}
+		
+		div span {
+			display: inline-block;
+			margin: 20px 0px;
+		}
+		
+		div span.ui {
+			color: red;
+			background: rgb(245,245,245);
+		}
+	</style>
+</head>
+<body>
+	<div id="d1">
+		<span class="ui">display: none;</span>
+		<img src="../images/16315139087750.jpg">
+		<button type="button" onclick="btn_click('remove')">Remove</button>
+	</div>
+	<div id="d2">
+		<span class="ui">visibility: hidden</span>
+		<img src="../images/16258186526120.png">
+		<button type="button" onclick="btn_click('hide')">Hide</button>
+	</div>
+	<div>
+		<span>Reset</span>
+		<img src="../images/16315139088220.jpg">
+		<button type="button" onclick="btn_click('reset')">Reset All</button>
+	</div>
+	
+	<script>
+		function btn_click(param) {
+			if(param == 'remove'){
+				var d1 = document.getElementById("d1");
+				d1.style.display = "none";
+			}else if(param == 'hide'){
+				var d2 = document.getElementById("d2");
+				d2.style.visibility = "hidden";
+			}else if(param == 'reset'){
+				var d1 = document.getElementById("d1");
+				var d2 = document.getElementById("d2");
+				
+				d1.style.display="inline-block";
+				d2.style.visibility="visible";
+			}
+		}
+	</script>
+	
+	
+</body>
+</html>
