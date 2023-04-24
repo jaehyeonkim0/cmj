@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Attribute Selectors</title>
+	<style>
+		a[target="_self"] {
+			background: powderblue;
+			text-decoration: none;
+		}
+		img {
+			width: 90px;
+			height: 90px;
+			margin: 10px;
+		}
+		
+		img[title~="ri"]{
+			border: 2px solid tomato;
+		}
+		
+		img[class^='mi'] {
+			opacity: 0.5;
+		}
+		
+		img[class|='mi']:hover {
+			opacity: 1.0;
+		}
+		
+		img[class$='test'] {
+			border: 3px solid red;
+		}
+		img[class*='t']{
+			outline: 5px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>Attribute Selectors</h1>
+	<a href="#" target="_blank">NAVER</a>
+	<a href="#" target="_self">GOOGLE</a>
+	<a href="#">DAUM</a>
+	<hr>
+	<img src="../images/16315139088220.jpg" title="mi ri" class="mi-ri">
+	<img src="../images/16315139088220.jpg" title="mi" class="mi-mi">
+	<img src="../images/16315139088220.jpg" title="ri" class="miri">
+	<img src="../images/16315139088220.jpg" title="ri" class="mitest">
+</body>
+</html>

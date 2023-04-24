@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS - Navigator Bars</title>
+	<style>
+		.con {
+			/* border: 1px solid red; */
+			list-style-type: none;
+			padding: 0px;
+			margin: 0px;
+			width: 800px;
+			background: rgb(40,42,53);
+			overflow: hidden;
+		}
+		
+		.con:after {
+			clear:both;
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+			/* border: 1px solid red; */
+		}
+		li {
+			/* border: 1px solid blue; */
+/* 			width: 100px; 
+			height: 35px; */
+			float: left;
+			/* border: 3px solid green; */
+			/* display: inline-block; */
+		}
+	
+		li> a {
+			/* border: 3px solid blue; */
+			display: block;
+			text-decoration: none;
+			color: white;
+			padding: 10px 16px;
+/* 			float: left;
+			width: 100px;
+			height: 35px; */
+			
+		}
+		
+		ul> li:first-child a {
+			background: rgb(4,170,109);
+		}
+		
+		ul> li:last-child {
+/* 			border: 3px solid green; */
+			float: right;
+			
+		}
+		
+		ul li a:hover:not(.active) {
+			background: #000;
+		}
+	
+/* 		ul {
+			background: rgb(40,42,53);
+			list-style-type: none;
+			height: 41px;
+			padding: 0px;
+			margin: 0px;
+			
+		}
+		ul> li {
+			float: left;
+			padding: 10px;
+		}
+		
+		ul> li> a {
+			display: block;
+			text-decoration: none;
+			color: white;
+		}
+		
+		ul> li:first-child {
+			background: rgb(4,170,109);
+			color: white;
+		} */
+	</style>
+</head>
+<body>
+	<h1>Horizontal</h1>
+	
+	<ul class="con">
+		<li class="active"><a href="#" class="active">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+</body>
+</html>
