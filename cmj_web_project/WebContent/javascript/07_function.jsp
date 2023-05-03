@@ -21,8 +21,6 @@
 				return this.name + "," + this.age;
 			}
 	};
-	
-	
 </script>
 </head>
 <body>
