@@ -1,26 +1,3 @@
-/*
-boxofficeType	문자열	박스오피스 종류를 출력합니다.0
-showRange		문자열	박스오피스 조회 일자를 출력합니다.0-1
-rnum			문자열	순번을 출력합니다.
-rank			문자열	해당일자의 박스오피스 순위를 출력합니다.1
-rankInten		문자열	전일대비 순위의 증감분을 출력합니다.
-rankOldAndNew	문자열	랭킹에 신규진입여부를 출력합니다.
-“OLD” : 기존 , “NEW” : 신규
-movieCd			문자열	영화의 대표코드를 출력합니다.
-movieNm			문자열	영화명(국문)을 출력합니다.
-openDt			문자열	영화의 개봉일을 출력합니다.2
-salesAmt		문자열	해당일의 매출액을 출력합니다.
-salesShare		문자열	해당일자 상영작의 매출총액 대비 해당 영화의 매출비율을 출력합니다.
-salesInten		문자열	전일 대비 매출액 증감분을 출력합니다.
-salesChange		문자열	전일 대비 매출액 증감 비율을 출력합니다.
-salesAcc		문자열	누적매출액을 출력합니다.
-audiCnt			문자열	해당일의 관객수를 출력합니다.3
-audiInten		문자열	전일 대비 관객수 증감분을 출력합니다.
-audiChange		문자열	전일 대비 관객수 증감 비율을 출력합니다.
-audiAcc			문자열	누적관객수를 출력합니다.4
-scrnCnt			문자열	해당일자에 상영한 스크린수를 출력합니다.
-showCnt			문자열	해당일자에 상영된 횟수를 출력합니다.
- */
 $(document).ready(function() {
 	const kobis = {
 		"boxOfficeResult" : {
@@ -219,26 +196,48 @@ $(document).ready(function() {
 			} ]
 		}
 	};
-	let movie = "<h1>"+kobis.boxOfficeResult.showRange+"</h1>";
-	movie += "<h1>"+kobis.boxOfficeResult.boxofficeType+"</h1>";
+	let boxOffice = kobis.boxOfficeResult;
+	let movie = "<h1>"+boxOffice.boxofficeType+"</h1>";
+	movie += "<h3>"+boxOffice.showRange+"</h3>";
 	
 	movie += "<table><tr><th>순위</th><th>제목</th><th>개봉날짜</th><th>금일 관객수</th><th>누적 관객수</th></tr>";
-	for(cinema of kobis.boxOfficeResult.dailyBoxOfficeList) {
-		
+	
+	for(cinema of boxOffice.dailyBoxOfficeList) {
 		movie += "<tr>";
 		movie += "<td>"+cinema.rank+"</td>";
 		movie += "<td>"+cinema.movieNm+"</td>";
 		movie += "<td>"+cinema.openDt+"</td>";
 		movie += "<td>"+cinema.audiCnt+"</td>";
 		movie += "<td>"+cinema.audiAcc+"</td>";
+		movie += "</tr>";
 	}
 	
 	movie += "</table>";
 	
 	$("body").append(movie);
 	
-	
-	
-	
-	
 });
+
+/*
+boxofficeType	문자열	박스오피스 종류를 출력합니다.0
+showRange		문자열	박스오피스 조회 일자를 출력합니다.0-1
+rnum			문자열	순번을 출력합니다.
+rank			문자열	해당일자의 박스오피스 순위를 출력합니다.1
+rankInten		문자열	전일대비 순위의 증감분을 출력합니다.
+rankOldAndNew	문자열	랭킹에 신규진입여부를 출력합니다.
+“OLD” : 기존 , “NEW” : 신규
+movieCd			문자열	영화의 대표코드를 출력합니다.
+movieNm			문자열	영화명(국문)을 출력합니다.
+openDt			문자열	영화의 개봉일을 출력합니다.2
+salesAmt		문자열	해당일의 매출액을 출력합니다.
+salesShare		문자열	해당일자 상영작의 매출총액 대비 해당 영화의 매출비율을 출력합니다.
+salesInten		문자열	전일 대비 매출액 증감분을 출력합니다.
+salesChange		문자열	전일 대비 매출액 증감 비율을 출력합니다.
+salesAcc		문자열	누적매출액을 출력합니다.
+audiCnt			문자열	해당일의 관객수를 출력합니다.3
+audiInten		문자열	전일 대비 관객수 증감분을 출력합니다.
+audiChange		문자열	전일 대비 관객수 증감 비율을 출력합니다.
+audiAcc			문자열	누적관객수를 출력합니다.4
+scrnCnt			문자열	해당일자에 상영한 스크린수를 출력합니다.
+showCnt			문자열	해당일자에 상영된 횟수를 출력합니다.
+ */

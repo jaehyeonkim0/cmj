@@ -18,7 +18,7 @@
 		}); */
 		
 		$("#btn1").click(function() {
-			window.open("http://www.naver.com");
+			window.open("http://www.naver.com","네이버팝업","width=800,height=800,scrollbars=yes");
 		});
 		
 		$("#btn2").on("click",function() {
